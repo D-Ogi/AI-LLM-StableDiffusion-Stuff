@@ -50,7 +50,7 @@ if not exist "%INSTALL_ENV_DIR%\python.exe" ( echo. && echo Conda environment is
 call "%CONDA_ROOT_PREFIX%\condabin\conda.bat" activate "%INSTALL_ENV_DIR%" || ( echo. && echo Miniconda hook not found. && goto end )
 
 @rem install ffmpeg if it not exists
-call "%CONDA_ROOT_PREFIX%\_conda.exe" install -y -q -c conda-forge ffmpeg
+call "%CONDA_ROOT_PREFIX%\_conda.exe" install -y -q -c conda-forge ffmpeg || ( echo. && echo ffmpeg installation failed. && goto end )
 
 @rem download the install.py or replace it with a newly downloaded version
 set FILE_URL=https://raw.githubusercontent.com/D-Ogi/AI-LLM-StableDiffusion-Stuff/main/Audiocraft-Windows-OneClick-Installer/installer.py
