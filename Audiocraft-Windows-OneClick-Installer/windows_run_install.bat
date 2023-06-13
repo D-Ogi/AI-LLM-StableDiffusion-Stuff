@@ -2,7 +2,7 @@
 
 @echo off
 REM Please set the following commandline arguments to your prefered settings
-set COMMANDLINE_ARGS=-autolaunch
+set COMMANDLINE_ARGS=
 
 cd /D "%~dp0"
 
@@ -48,6 +48,12 @@ if not exist "%INSTALL_ENV_DIR%\python.exe" ( echo. && echo Conda environment is
 
 @rem activate installer env
 call "%CONDA_ROOT_PREFIX%\condabin\conda.bat" activate "%INSTALL_ENV_DIR%" || ( echo. && echo Miniconda hook not found. && goto end )
+
+@rem download the install.py or replace it with a newly downloaded version
+set FILE_URL=https://raw.githubusercontent.com/D-Ogi/AI-LLM-StableDiffusion-Stuff/main/Audiocraft-Windows-OneClick-Installer/installer.py
+set FILE_PATH=%INSTALL_DIR%\installer.py
+
+call curl -Lk "%FILE_URL%" > "%FILE_PATH%" || ( echo. && echo File failed to download. && goto end )
 
 @rem setup installer env
 ::echo Launching Audiocraft GUI - please edit windows_run.bat to customize commandline arguments
