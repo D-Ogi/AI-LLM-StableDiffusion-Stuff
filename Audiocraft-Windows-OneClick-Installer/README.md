@@ -16,22 +16,27 @@ Audiocraft is a Python library built on PyTorch, primarily used for deep learnin
 
 This installer is intended for users who want to quickly set up Audiocraft on a Windows system. It has been adopted from [bark-gui](https://github.com/C0untFloyd/bark-gui) and modified to work with Audiocraft.
 
-### Components
+### 🚀 Installation Instructions 🚀
 
-- `windows_run_install.bat`: This is a Batch file script for Windows systems that sets up the environment and handles the installation of Audiocraft. It downloads and installs Miniconda, Git, and other dependencies required for Audiocraft.
+1. **Download** the `windows_run_install.bat` file from this repository.
+2. **Double-click** the downloaded `windows_run_install.bat` file.
 
-- `installer.py`: This Python script is automatically downloaded by `windows_run_install.bat`. It checks for Conda installation, creates an environment, installs Git, clones the Audiocraft repository, and sets up dependencies.
+    🎉 This is all it takes! The script will automatically handle the rest of the installation process for you.
+
+### 🚀 Starting Audiocraft GUI 🚀
+
+After the installation process is complete, you can **also use the same `windows_run_install.bat` file to start Audiocraft's graphical user interface (GUI)**. Just double-click the `windows_run_install.bat` file again, and the GUI should launch. This makes it easy to both install and run Audiocraft using a single file. It can also update the Audiocraft's repositories.
 
 ### How It Works
 
 The `windows_run_install.bat` script uses Miniconda to create an isolated Python environment on your system. It downloads `installer.py`, which then installs Audiocraft and its dependencies within this environment. This ensures that your system remains clean and avoids conflicts with other Python packages.
 
-### Installation Instructions
+### Components
 
-1. Download the `windows_run_install.bat` file from this repository.
-2. Double-click the downloaded `windows_run_install.bat` file.
+- `windows_run_install.bat`: This is a Batch file script for Windows systems that sets up the environment and handles the installation of Audiocraft. It downloads and installs Miniconda, Git, and other dependencies required for Audiocraft and starts the GUI.
 
-This is all it takes! The script will automatically handle the rest of the installation process for you.
+- `installer.py`: This Python script is automatically downloaded by `windows_run_install.bat`. It checks for Conda installation, creates an environment, installs Git, clones the Audiocraft repository, and sets up dependencies.
+
 
 ## Compatibility
 
